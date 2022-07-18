@@ -1,0 +1,607 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Oswald&family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;;
+}
+
+
+
+.cabezera{
+    background-color: rgb(27, 27, 27);
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+.cabezera a{
+    text-decoration: none;
+    color: rgb(218, 214, 214);
+    font-size: 1.5rem;
+    padding-right: 15px;
+}
+
+.cabezera nav ul{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
+.cabezera nav ul li{
+    list-style: none;
+}
+.cabezera nav ul li a{
+    text-decoration: none;
+    padding: 5px;
+    color: rgb(218, 214, 214);
+    font-size: 18px;
+}
+
+.cabezera a:hover{
+    padding: 0.8rem;
+    background-color: rgb(218, 214, 214);
+    color: rgb(27, 27, 27);
+    border-radius: 1rem;
+}
+
+
+/*************************fin de la cabezera **************/
+
+
+
+
+/*************************inicio del main ******************/
+
+.contenedor{
+    padding-top: 5px;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-auto-rows:auto;
+    grid-auto-flow: dense;
+    grid-auto-columns: 1fr;
+    gap:0.2em;
+    grid-template-areas: 
+    "foto_1 foto_1 foto_2 foto_2 foto_3 foto_3"
+    "foto_1 foto_1 foto_4 foto_4 foto_4  foto_5"
+    "foto_1 foto_1 foto_4 foto_4 foto_4  foto_5";
+}
+
+
+.contenedor_galeria{
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.contenedor_galeria::before{
+    content: "dale click";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(27, 27, 27, 0.568);
+    transform: scaleY(0);
+    transition: transform .4s;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.contenedor_galeria:hover::before{
+    transform: scaleY(1)  ;
+}
+
+.contenedor_foto{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.foto_1{
+    grid-area: foto_1;
+}
+
+.foto_2{
+    grid-area: foto_2;
+}
+
+.foto_3{
+    grid-area: foto_3;
+}
+.foto_4{
+    grid-area: foto_4;
+}
+.foto_5{
+    grid-area: foto_5;
+}
+
+.banner{
+    margin-top: 5px;
+    height: 800px;
+    background-image: url(/root/assets/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.banner_texto p{
+   font-size: 1.9rem;
+   color: rgb(231, 235, 238);
+   text-align: center;
+   padding: 1.5rem;
+   background-color: rgba(36, 35, 35, 0.548);
+}
+
+.banner_enlace{
+    background-color: aqua;
+    display: inline-block;
+    text-align: center;
+    border-radius: 0.7rem;
+    padding: 0.5rem;
+}
+
+.banner_texto a{
+    text-align: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: rgb(54, 49, 51); 
+    
+    
+}
+.banner_centrar_enlace{
+    text-align: center;
+    padding-top: 0.5rem;
+    
+}
+
+
+/*************************fin del main ******************/
+
+
+
+/***********************inicio del footer ***************/
+
+.pie_pagina{
+    margin-top: 5px;
+    background-color: rgb(27, 27, 27);
+    height: 150px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: auto;
+    grid-auto-flow: dense;
+    grid-template-areas: 
+    "pie_pagina__1 pie_pagina__2 pie_pagina__3";
+}
+
+.pie_pagina__1{
+    grid-area:pie_pagina__1 ;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie_pagina__1 li{
+   list-style: none;
+   padding: 0.18rem;
+   
+}
+.pie_pagina__1 a{
+    text-decoration: none;
+    color: rgb(218, 214, 214);
+    font-size: 1.2rem;
+    
+}
+
+.pie_pagina__2{
+    grid-area:pie_pagina__2;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pie_pagina__2 .ruth{
+    text-decoration: none;
+    color: rgb(218, 214, 214);
+    font-size: 1.8rem;
+    
+}
+
+.pie_pagina__2 .red-social{
+    margin-top: 2.5rem;
+}
+
+.pie_pagina__2 .red-social a{
+    text-decoration: none;
+    color: rgb(208, 33, 214);
+    padding: 0.5rem;
+    font-size: 20px;
+    
+}
+
+.pie_pagina__3{
+    grid-area: pie_pagina__3;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie_pagina__3 li{
+    list-style: none;
+    padding: 0.19rem;
+}
+
+.pie_pagina__3 a{
+    text-decoration: none;
+    color: rgb(218, 214, 214);
+    font-size: 1.2rem;
+}
+
+
+/***********************************************************************************/
+
+
+
+
+/****************quien soy***************************/
+
+.contenedor_fotografo{
+    margin-top: 2px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-auto-rows: auto;
+    grid-auto-flow: dense;
+    grid-template-areas: 
+    "contenedor_fotografo__imagen contenedor_informacion";
+}
+
+.contenedor_fotografo__imagen{
+    grid-area: contenedor_fotografo__imagen;
+
+}
+
+.contenedor_fotografo img{
+    width: 100%;
+    height: 100%;
+}
+
+.contenedor_informacion{
+    position: relative;
+    bottom: 50px;
+    grid-area: contenedor_informacion;
+    padding: 1.2rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor_informacion p{
+    line-height: 1.8rem;
+    font-size: 1.2rem;
+}
+
+.contenedor_informacion a{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(221, 218, 218);
+    background-color: rgb(27, 27, 27);
+    font-size: 1.4rem;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+/*************************inicio de contactanos************************/
+
+.contactanos{
+    margin-top: 2px;
+    height: 800px;
+    background-image: url(/root/assets/contactanos.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+}
+
+
+    .contactanos .formulario{
+        margin-top: 30px;
+        display:flex;
+        flex-direction: column;
+    }
+    .formulario{
+        background-color: rgba(27, 27, 27, 0.678);
+        width: 90%;
+        margin: auto;
+        max-width: 400px;
+        border-radius: 1em;
+        padding: 3.5em 1.5em;
+        position: relative;
+        top: 80px;
+    }
+    
+    .formulario_container{
+        width: 100%;
+        display: grid;
+        gap: 1em;
+        grid-auto-columns: 100%;
+    }
+    
+    .formulario_container .titulo_formulario{
+        font-size: 36px;
+        text-align: center;
+        color: rgb(218, 214, 214);
+    }
+    .formulario_container input{
+        padding: .8em;
+    }
+    
+    .texto{
+      resize: none;
+      padding: 1.8em .5em;
+      margin-bottom: 1.5em;
+    
+    }
+    .envio{
+        font-size: 1rem;
+        background-color: #089fe0;
+        color: #fff;
+        border:none;
+        font-weight: 300;
+        padding: .7em 0;
+        border-radius: .2em;
+        cursor: pointer;
+    }
+    
+    .pie-pagina__contactanos{
+        margin-top: 60px;
+    }
+
+    
+/***************************precios******************************/
+
+    .principal__precio{
+        background-image: url(/root/assets/precio.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    main .precio{
+        width: 90%;
+        max-width: 900px;
+        margin: auto;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .tabla{
+        width: 33%;
+        height: 550px;
+        margin: auto;
+        border: 1px solid #343759;
+        border-radius: 4px;
+        box-shadow: 2px 2px 4px 0px #343759;
+        padding: 60px;
+        text-align: center;
+        flex-grow: 1;
+        color: rgb(146, 24, 136);
+    
+    }
+
+    .tabla a{
+        text-decoration: none;
+    }
+    
+    .tabla1{
+        position: relative;
+        right: 15px;
+    }
+    
+    .tabla3{
+        position: relative;
+        left: 15px;
+    }
+    
+    
+    
+    .tabla img{
+        width: 120px;
+        margin-bottom: 2px;
+    
+    }
+    
+    .tabla>h2{
+        font-size: 50px;
+        margin-bottom: 35px;
+    
+    }
+    
+    .tabla>h3{
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+    
+    .tabla>p{
+        display: block;
+        margin-bottom: 20px;
+    
+    }
+    
+    .boton{
+        display: inline-block;
+        width: 150px;
+        padding: 12px;
+        background: rgb(221, 218, 218);
+        color: #343759;
+        border-radius: 100px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 600;
+        margin: auto;
+    }
+    
+    .tabla:hover{
+        background: rgba(36, 35, 35, 0.822);
+        color: #f1f1f2;
+        transition: 0.5s all;
+        transform: scale(1.07);
+        cursor: pointer;
+    }
+
+
+/***********************MEDIAQUERY*****************************/
+
+
+@media (max-width:760px){
+    .contenedor{
+        
+            padding-top: 5px;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-auto-rows:auto;
+            grid-auto-flow: dense;
+            grid-auto-columns: 1fr;
+            gap:0.2em;
+            grid-template-areas: 
+            "foto_1 foto_5"
+            "foto_2 foto_3"
+            "foto_4 foto_4";
+        }
+
+        .cabezera nav ul li a{
+            font-size: .9rem;
+        }
+        .cabezera a h3{
+            font-size: 1.5rem;
+        }
+
+        .banner_texto p{
+            font-size: 0.9rem;
+            line-height: 1.3rem;
+        }
+        .banner a{
+            font-size: 1.2rem;
+        }
+        .banner{
+            margin-top: 5px;
+            height: 520px; 
+        }
+
+        .pie_pagina{
+            margin-top: 5px;
+            background-color: rgb(27, 27, 27);
+            height: 220px;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-areas: 
+            "pie_pagina__1 pie_pagina__3"
+            "pie_pagina__2 pie_pagina__2";
+        }
+
+         .pie_pagina__2 a{
+             position: relative;
+             top: 10px;
+         }
+         .pie_pagina__2 .red-social{
+             position: relative;
+             bottom: 30px;
+         }
+
+
+         .principal__precio{
+             height: 1800px;
+             background-image: url(/root/assets/precio.jpg);
+             background-size :cover;
+             background-position: center;
+             background-repeat: no-repeat;
+         }
+
+         .principal__precio .tabla>h2{
+            font-size: 80px;
+            margin-bottom: 35px;
+            
+        
+        }
+        
+        .principal__precio .tabla{
+          width: 85%;
+          padding: 20%;
+          margin: 25px;
+      }
+
+      .contenedor_fotografo{
+        margin-top: 2px;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 60% 50%;
+        grid-auto-flow: dense;
+        grid-template-areas: 
+        "contenedor_fotografo__imagen"
+        "contenedor_informacion";
+    }
+
+    .contenedor_fotografo__imagen{
+        grid-area: contenedor_fotografo__imagen;
+    
+    }
+    
+    .contenedor_fotografo img{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .contenedor_informacion{
+        position: relative;
+        bottom: 10px;
+        grid-area: contenedor_informacion;
+        padding: 1rem;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .contenedor_informacion p{
+        position: relative;
+        bottom: 35px;
+        line-height: 1rem;
+        font-size: .8rem;
+    }
+
+    .contenedor_informacion a{
+        position: relative;
+        bottom: 25px;
+        font-size: 1rem;
+        padding: .5rem;
+        border-radius: 2rem;
+    }
+
+
+
+    }
+
+
+
+
+
+
+
+
+ 
